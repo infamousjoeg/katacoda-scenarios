@@ -12,6 +12,6 @@ curl -fsSL cybr.rocks/conjur-install | bash -s
 echo "done" >> /root/katacoda-finished
 
 docker cp /policies/* root_client_1:/policies/
-docker exec root_client_1 conjur policy load -b root -f /policies/root.yml > demouser.txt
+docker exec root_client_1 conjur policy load root /policies/root.yml > demouser.txt
 
 echo "done" >> /root/katacoda-background-finished
