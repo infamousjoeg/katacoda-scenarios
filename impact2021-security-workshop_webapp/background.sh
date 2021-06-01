@@ -11,7 +11,7 @@ docker exec lamp mysql -h localhost -uroot \
         CREATE USER 'devapp1' IDENTIFIED BY 'Cyberark1';
         GRANT ALL PRIVILEGES ON conjur_demo.* TO 'devapp1';
         FLUSH PRIVILEGES;
-        CREATE TABLE IF NOT EXISTS demo (
+        CREATE TABLE IF NOT EXISTS conjur_demo.demo (
             message VARCHAR(255) NOT NULL
         ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
         INSERT INTO demo (message) VALUES ('If you are seeing this message, we have successfully connected PHP to our backend MySQL database!');"
