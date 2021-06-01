@@ -9,6 +9,9 @@ docker exec lamp mysql -h localhost -uroot \
 
 curl -fsSL cybr.rocks/conjur-install | bash -s
 
-docker cp /policies/* root_client_1:/policies/
+echo "done" >> /root/katacoda-finished
 
-touch /tmp/.state_ready
+docker cp /policies/* root_client_1:/policies/
+docker exec root_client_1 conjur policy load -b root -f /policies/root.yml > demouser.txt
+
+echo "done" >> /root/katacoda-background-finished

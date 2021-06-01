@@ -16,14 +16,11 @@
       "code": "foreground.sh"
     },
     "assets": {
-      "client": [
-        {
-          "file": "root.yml",
-          "target": "/policies",
-          "chmod":"+rw"
-        }
+      "host01": [
+          {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+          {"file": "root.yml", "target": "/policies/root.yml", "chmod": "755"}
       ]
-     },
+    },
     "finish": {
       "text": "finish.md"
     }
