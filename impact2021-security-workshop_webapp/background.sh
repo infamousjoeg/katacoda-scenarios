@@ -15,5 +15,6 @@ docker cp /policies/* root_client_1:/policies/
 docker exec root_client_1 conjur policy load root /policies/root.yml > demouser.txt
 
 echo "alias conjur='docker exec root_client_1 conjur'" >> /root/.bashrc
+source /root/.bashrc
 
 echo "done" >> /root/katacoda-background-finished
