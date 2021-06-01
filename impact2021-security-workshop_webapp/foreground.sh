@@ -2,7 +2,7 @@
 
 echo "Please wait while state becomes ready..."
 
-until [ -f /tmp/state_ready ]
+until [ -f /tmp/.state_ready ]
 do
      sleep 1
 done
