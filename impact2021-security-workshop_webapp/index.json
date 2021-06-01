@@ -15,6 +15,15 @@
       "courseData": "background.sh",
       "code": "foreground.sh"
     },
+    "assets": {
+      "client": [
+        {
+          "file": "root.yml",
+          "target": "/policies",
+          "chmod":"+rw"
+        }
+      ]
+     },
     "finish": {
       "text": "finish.md"
     }
