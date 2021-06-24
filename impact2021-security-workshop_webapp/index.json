@@ -4,11 +4,18 @@
   "icon": "fa-shield-alt",
   "details": {
     "steps": [
-        {
+      {
         "title": "Agenda",
         "text": "agenda.md"
+      },
+      {
+        "title": "Environment Overview",
+        "text": "env_overview.md"
+      },
+      {
+        "title": "Hard-Coded Credentials Web App",
+        "text": "insecure_app.md"
       }
-
     ],
     "intro": {
       "text": "intro.md",
@@ -18,7 +25,7 @@
     "assets": {
       "host01": [
           {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-          {"file": "root.yml", "target": "/policies/root.yml", "chmod": "755"}
+          {"file": "root.yml", "target": "/policy", "chmod": "755"}
       ]
     },
     "finish": {
@@ -26,9 +33,15 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "showdashboard": true,
+    "dashboards": [
+        {"name": "Web App", "port": 80}
+    ],
+    "uieditorpath": "/opt/app",
+    "idePort": 23000,
+    "uilayout": "vscode-terminal-split"
   },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "ubuntu:1804"
   }
 }

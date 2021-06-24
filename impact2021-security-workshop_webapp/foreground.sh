@@ -2,6 +2,3 @@
 
 # Wait for all containers to start and configure
 while [ ! -f /usr/local/bin/wait.sh ]; do sleep 1; done; /usr/local/bin/wait.sh
-
-# Source new alias for Conjur CLI
-source /root/.bashrc
